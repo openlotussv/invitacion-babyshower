@@ -252,7 +252,7 @@ html[data-theme="dark"] .theme-icon-sun {
   border: 1px solid #ffffffbd;
   border-radius: 30px;
   /* La imagen de esta variable se configura desde el gestor local. */
-  --envelope-image: none;
+  --envelope-image: url("../img/portada-1dcfb147b67c4184.webp");
   background-image:
     linear-gradient(145deg, #ffffff50, #ffffff20),
     var(--envelope-image),
