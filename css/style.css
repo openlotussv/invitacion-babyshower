@@ -254,7 +254,7 @@ html[data-theme="dark"] .theme-icon-sun {
   /* La imagen de esta variable se configura desde el gestor local. */
   --envelope-image: url("../img/portada-1dcfb147b67c4184.webp");
   background-image:
-    linear-gradient(145deg, #ffffff50, #ffffff20),
+    linear-gradient(145deg, #ffffff20, #ffffff0d),
     var(--envelope-image),
     radial-gradient(ellipse at 50% 24%, #ffffffbd 0, transparent 54%),
     linear-gradient(145deg, #dcebe5, #c9ded8 52%, #b8d2ce);
@@ -271,7 +271,7 @@ html[data-theme="dark"] .theme-icon-sun {
 html[data-theme="dark"] .card-envelope {
   border-color: #ffffff25;
   background-image:
-    linear-gradient(145deg, #11182755, #11182730),
+    linear-gradient(145deg, #11182724, #11182712),
     var(--envelope-image),
     radial-gradient(ellipse at 50% 24%, #45635c 0, transparent 54%),
     linear-gradient(145deg, #29423f, #21383b 52%, #1b2c37);
@@ -312,14 +312,14 @@ html[data-theme="dark"] .card-envelope {
   inset: 0 0 auto;
   height: 58%;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-  background: linear-gradient(155deg, #eaf3eddd, #c6ddd4dd);
+  background: linear-gradient(155deg, #eaf3ed88, #c6ddd488);
   filter: drop-shadow(0 5px 5px #304d4412);
   transform-origin: top center;
   transition: transform .55s cubic-bezier(.2,.75,.3,1), opacity .35s ease;
 }
 
 html[data-theme="dark"] .envelope-flap {
-  background: linear-gradient(155deg, #38564fdd, #29423fdd);
+  background: linear-gradient(155deg, #38564f99, #29423f99);
 }
 
 .envelope-front {
@@ -327,11 +327,11 @@ html[data-theme="dark"] .envelope-flap {
   z-index: 1;
   inset: 28% 0 0;
   clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
-  background: linear-gradient(135deg, #d0e2d9dd, #b5d0c8dd);
+  background: linear-gradient(135deg, #d0e2d999, #b5d0c899);
 }
 
 html[data-theme="dark"] .envelope-front {
-  background: linear-gradient(135deg, #2c4742dd, #223b3ddd);
+  background: linear-gradient(135deg, #2c474299, #223b3d99);
 }
 
 .seal {
