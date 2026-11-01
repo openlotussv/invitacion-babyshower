@@ -719,18 +719,24 @@ html[data-theme="dark"] .btn-primary {
   display: grid;
   grid-template-columns: minmax(0, 1.4fr) minmax(115px, .8fr);
   gap: 10px;
+  align-items: start;
 }
 
 .form-field {
-  display: grid;
+  display: contents;
+}
+
+.form-field > span {
+  grid-row: 1;
   min-width: 0;
-  gap: 6px;
   color: var(--muted);
   font-size: 10px;
   font-weight: 700;
+  line-height: 1.4;
 }
 
 .form-field input {
+  grid-row: 2;
   width: 100%;
   min-height: 40px;
   padding: 0 10px;
