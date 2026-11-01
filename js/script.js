@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     renderGuestState();
 
     const message = encodeURIComponent(
-      `¡Hola! Confirmo mi asistencia al Baby Shower.\n\nMi nombre es: ${guestState.guestName}\nPersonas que asistirán: 1\n\n¡Muchas gracias por la invitación!`
+      `👶🏻🍼 ¡Hola! Confirmo mi asistencia al Baby Shower. 🎀\n\nMi nombre es: ${guestState.guestName}\nPersonas que asistirán: 1\n\n¡Muchas gracias por la invitación! 🧸💛\n\n✅ Después de enviar este mensaje, regresa a la invitación y toca «Ya envié mi confirmación» para finalizar y guardar tu respuesta en este dispositivo.`
     );
     window.open(
       `https://wa.me/${eventConfig.whatsappHostNumber}?text=${message}`,
