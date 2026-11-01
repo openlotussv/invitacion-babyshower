@@ -101,9 +101,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         guestName: typeof parsedState.guestName === 'string'
           ? parsedState.guestName.slice(0, 80)
           : '',
-        guestCount: Number.isInteger(parsedState.guestCount)
-          ? Math.min(20, Math.max(1, parsedState.guestCount))
-          : 1,
+        guestCount: 1,
         whatsappOpened: parsedState.whatsappOpened === true,
         confirmedAt: typeof parsedState.confirmedAt === 'string'
           ? parsedState.confirmedAt
@@ -134,10 +132,12 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
   }
 
-  function renderGuestState() {
+  function renderGuestState(syncFields = true) {
     confirmation.classList.remove('is-error');
-    guestNameInput.value = guestState.guestName;
-    guestCountInput.value = String(guestState.guestCount);
+    if (syncFields) {
+      guestNameInput.value = guestState.guestName;
+      guestCountInput.value = '1';
+    }
 
     if (storageWarning) {
       confirmationText.textContent = storageWarning;
@@ -200,31 +200,30 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   function saveGuestDraft() {
     guestState.guestName = guestNameInput.value.trim();
-    guestState.guestCount = Number(guestCountInput.value) || 1;
+    guestState.guestCount = 1;
     if (guestState.confirmedAt) {
       guestState.confirmedAt = null;
       guestState.whatsappOpened = false;
     }
     saveGuestState();
-    renderGuestState();
+    renderGuestState(false);
   }
 
   guestNameInput.addEventListener('input', saveGuestDraft);
-  guestCountInput.addEventListener('input', saveGuestDraft);
 
   rsvpForm.addEventListener('submit', event => {
     event.preventDefault();
     if (!rsvpForm.reportValidity()) return;
 
     guestState.guestName = guestNameInput.value.trim();
-    guestState.guestCount = Number(guestCountInput.value);
+    guestState.guestCount = 1;
     guestState.whatsappOpened = true;
     guestState.confirmedAt = null;
     saveGuestState();
     renderGuestState();
 
     const message = encodeURIComponent(
-      `¡Hola! Confirmo mi asistencia al Baby Shower.\n\nMi nombre es: ${guestState.guestName}\nPersonas que asistirán: ${guestState.guestCount}\n\n¡Muchas gracias por la invitación!`
+      `¡Hola! Confirmo mi asistencia al Baby Shower.\n\nMi nombre es: ${guestState.guestName}\nPersonas que asistirán: 1\n\n¡Muchas gracias por la invitación!`
     );
     window.open(
       `https://wa.me/${eventConfig.whatsappHostNumber}?text=${message}`,
@@ -235,7 +234,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   markConfirmedButton.addEventListener('click', () => {
     guestState.guestName = guestNameInput.value.trim();
-    guestState.guestCount = Number(guestCountInput.value) || 1;
+    guestState.guestCount = 1;
     guestState.confirmedAt = new Date().toISOString();
     guestState.whatsappOpened = true;
     saveGuestState();

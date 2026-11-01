@@ -59,7 +59,9 @@ En el gestor local puedes editar estos datos sin cambiar código:
 
 El botón de RSVP abre WhatsApp con el nombre y la cantidad de asistentes; la
 persona debe pulsar **Enviar**. Al volver a la invitación puede marcar que ya
-envió su respuesta.
+envió su respuesta. Cada invitación es individual: la cantidad está fija en una
+persona. El campo acepta nombre y apellido; los espacios se conservan mientras
+se escribe.
 
 El tema, el borrador de RSVP y la confirmación marcada se guardan en `localStorage`
 del navegador y dispositivo de cada invitado. Al recargar, la invitación vuelve

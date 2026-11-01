@@ -131,12 +131,13 @@
         <p class="rsvp-form-title">¿Nos acompañas?</p>
         <div class="rsvp-fields">
           <label class="form-field">
-            <span>Tu nombre</span>
-            <input id="guestName" name="guestName" type="text" maxlength="80" autocomplete="name" placeholder="Escribe tu nombre" required>
+            <span>Tu nombre y apellido</span>
+            <input id="guestName" name="guestName" type="text" maxlength="80" autocomplete="name" placeholder="Escribe tu nombre y apellido" required>
           </label>
           <label class="form-field">
             <span>Personas que asistirán</span>
-            <input id="guestCount" name="guestCount" type="number" min="1" max="20" value="1" inputmode="numeric" required>
+            <input id="guestCount" name="guestCount" type="number" min="1" max="1" value="1" inputmode="numeric" readonly aria-describedby="guestCountHint" required>
+            <small id="guestCountHint">Cada invitación es válida para una persona.</small>
           </label>
         </div>
         <p class="rsvp-hint">Tus datos se guardan solo en este dispositivo.</p>
