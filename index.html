@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f5f3f0">
+  <meta name="description" content="Una invitación especial para celebrar la llegada de nuestro bebé.">
+  <title>¡Invitación a Baby Shower!</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="stars-bg" aria-hidden="true"></div>
+  <div class="ambient-particles" aria-hidden="true">
+    <span>✦</span><span>♡</span><span>✧</span><span>♡</span>
+    <span>✦</span><span>✧</span><span>♡</span><span>✦</span>
+  </div>
+
+  <main class="page-shell">
+    <header class="page-toolbar">
+      <p class="brand-mark"><span aria-hidden="true">✦</span> Un día muy especial</p>
+      <div class="toolbar-actions">
+        <a class="local-manager-link" id="localManagerLink" href="http://localhost/invitacion_babyshower_admin/" hidden>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 8.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Z"></path><path d="m19.4 13.5 1.1.9-1.5 2.6-1.4-.5a7.8 7.8 0 0 1-1.6.9l-.3 1.5h-3l-.3-1.5a7.8 7.8 0 0 1-1.6-.9l-1.4.5-1.5-2.6 1.1-.9a7.5 7.5 0 0 1 0-1.9l-1.1-.9 1.5-2.6 1.4.5a7.8 7.8 0 0 1 1.6-.9l.3-1.5h3l.3 1.5a7.8 7.8 0 0 1 1.6.9l1.4-.5 1.5 2.6-1.1.9a7.5 7.5 0 0 1 0 1.9Z"></path></svg>
+          <span>Administrar</span>
+        </a>
+        <button class="theme-toggle" id="themeToggle" type="button" aria-label="Activar modo oscuro" aria-pressed="false">
+          <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.6 8.6 0 1 0 20.2 15.3Z"></path>
+          </svg>
+          <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path>
+          </svg>
+          <span id="themeLabel">Modo oscuro</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="card-container" aria-label="Invitación al Baby Shower">
+      <button class="card-envelope" id="envelope" type="button" aria-label="Abrir la invitación" aria-describedby="envelopeHint">
+        <span class="envelope-flap" aria-hidden="true"></span>
+        <span class="envelope-front" aria-hidden="true"></span>
+        <span class="envelope-sparkle sparkle-one" aria-hidden="true">✦</span>
+        <span class="envelope-sparkle sparkle-two" aria-hidden="true">✧</span>
+        <span class="seal">
+          <span class="seal-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M20.2 15.3A8.5 8.5 0 0 1 8.7 3.8 8.6 8.6 0 1 0 20.2 15.3Z"></path><path d="m17.5 4.5.5 1.3 1.3.5-1.3.5-.5 1.3L17 6.8l-1.3-.5 1.3-.5.5-1.3Z"></path></svg>
+          </span>
+          <span class="seal-title">Una dulce sorpresa</span>
+          <span class="seal-hint" id="envelopeHint">Toca para abrir tu invitación</span>
+        </span>
+      </button>
+
+      <article class="card-inner" id="cardInner" aria-labelledby="invitationTitle" tabindex="-1" hidden>
+      <p class="config-warning" id="configWarning" role="status" hidden></p>
+        <div class="card-topline"><span></span><svg class="topline-heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5-8.8 11-8.8 11s-8.8-6-8.8-11a4.7 4.7 0 0 1 8.8-2.2 4.7 4.7 0 0 1 8.8 2.2Z"></path></svg><span></span></div>
+      <div class="card-header">
+        <span class="badge"><span aria-hidden="true">✦</span> BABY SHOWER <span aria-hidden="true">✦</span></span>
+        <p class="eyebrow">CON MUCHO AMOR TE INVITAMOS A CELEBRAR</p>
+        <h1 id="invitationTitle">¡Te esperamos!</h1>
+        <p class="subtitle">La llegada de nuestro bebé está muy cerca</p>
+      </div>
+
+      <div class="baby-illustration" aria-hidden="true">
+        <span class="illustration-sparkle illustration-sparkle-left">✧</span>
+        <span class="icon-circle">
+          <svg viewBox="0 0 64 64">
+          <path d="M25 14h14v6l5 6v25a5 5 0 0 1-5 5H25a5 5 0 0 1-5-5V26l5-6Z" fill="var(--bottle-fill)" stroke="currentColor" stroke-linejoin="round" stroke-width="2.5"></path>
+          <path d="M28 14V8c0-2 1.5-3.5 3.5-3.5h1C34.5 4.5 36 6 36 8v6" fill="var(--bottle-accent)" stroke="currentColor" stroke-linejoin="round" stroke-width="2.5"></path>
+          <path d="M23 15h18v6H23zm-3 13h24M25 37h6m-6 6h6" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"></path>
+          <path d="M40 36v2m0 4v2m0 4v2" stroke="currentColor" stroke-linecap="round" stroke-width="1.7"></path>
+          <path d="M32 26c-2.2 2.8-3.3 4-3.3 5.5a3.3 3.3 0 0 0 6.6 0c0-1.5-1.1-2.7-3.3-5.5Z" fill="var(--bottle-accent)" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+          </svg>
+        </span>
+        <span class="illustration-sparkle illustration-sparkle-right">✦</span>
+      </div>
+
+      <div class="details-container">
+        <div class="detail-item">
+          <span class="icon icon-date" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="16" rx="2.5"></rect><path d="M7.5 3v4m9-4v4M3.5 9.5h17"></path></svg>
+          </span>
+          <div>
+            <strong>Fecha</strong>
+            <p id="eventDate">Sábado, 20 de noviembre de 2026</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <span class="icon icon-time" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"></circle><path d="M12 7v5l3.5 2"></path></svg>
+          </span>
+          <div>
+            <strong>Hora</strong>
+            <p id="eventTime">4:00 PM</p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <span class="icon icon-place" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M19 10.2c0 5-7 11-7 11s-7-6-7-11a7 7 0 1 1 14 0Z"></path><circle cx="12" cy="10" r="2.2"></circle></svg>
+          </span>
+          <div>
+            <strong>Lugar</strong>
+            <p id="venueName">Escribe aquí el nombre del lugar<br><small id="venueAddress">Escribe aquí la dirección completa</small></p>
+          </div>
+        </div>
+
+        <div class="detail-item">
+          <span class="icon icon-gift" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 10h18v11H3zm-1-5h20v5H2zm10 5v11m0-16c0-3.5-5.5-4-5.5-1.5S8.5 6 12 5m0 0c0-3.5 5.5-4 5.5-1.5S15.5 6 12 5"></path></svg>
+          </span>
+          <div>
+            <strong id="giftTitle">Mesa de Regalos / Lluvia de Sobres</strong>
+            <p id="giftMessage">Tu presencia es nuestro mejor regalo (Lluvia de Sobres)</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a href="#" id="mapLink" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 10.2c0 5-7 11-7 11s-7-6-7-11a7 7 0 1 1 14 0Z"></path><circle cx="12" cy="10" r="2.2"></circle></svg>
+          <span>Ver ubicación</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+      <form class="rsvp-form" id="rsvpForm">
+        <p class="rsvp-form-title">¿Nos acompañas?</p>
+        <div class="rsvp-fields">
+          <label class="form-field">
+            <span>Tu nombre</span>
+            <input id="guestName" name="guestName" type="text" maxlength="80" autocomplete="name" placeholder="Escribe tu nombre" required>
+          </label>
+          <label class="form-field">
+            <span>Personas que asistirán</span>
+            <input id="guestCount" name="guestCount" type="number" min="1" max="20" value="1" inputmode="numeric" required>
+          </label>
+        </div>
+        <p class="rsvp-hint">Tus datos se guardan solo en este dispositivo.</p>
+        <button class="btn btn-primary" id="rsvpBtn" type="submit">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-4.5a8.4 8.4 0 1 1 16.3-4Z"></path><path d="M8.5 9.2c.7 2.4 2.4 4.1 4.8 4.8"></path></svg>
+          <span>Enviar por WhatsApp</span>
+          <span class="button-arrow" aria-hidden="true">→</span>
+        </button>
+      </form>
+      <div class="rsvp-confirmation" id="rsvpConfirmation" role="status" aria-live="polite" hidden>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7"></path><circle cx="12" cy="12" r="9"></circle></svg>
+        <span id="rsvpConfirmationText"></span>
+      </div>
+      <button class="confirm-sent-button" id="markConfirmedBtn" type="button" hidden>Ya envié mi confirmación</button>
+        <p class="card-footer-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 8.8c0 5-8.8 11-8.8 11s-8.8-6-8.8-11a4.7 4.7 0 0 1 8.8-2.2 4.7 4.7 0 0 1 8.8 2.2Z"></path></svg> Nos encantará compartir este día contigo</p>
+      </article>
+    </section>
+
+    <footer class="page-footer"><span>Hecho con amor</span><span aria-hidden="true">·</span><span>Una celebración para recordar</span></footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
