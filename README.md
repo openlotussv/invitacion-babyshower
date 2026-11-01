@@ -14,12 +14,23 @@ que no requieren cargar AdminLTE ni Bootstrap desde el servidor local.
 ├── README.md
 ├── css/
 │   └── style.css
+├── img/
+│   └── (imagen de portada opcional, administrada desde el gestor)
 └── js/
     └── script.js
 ```
 
 Los pictogramas de la invitación son SVG integrados y no usan emojis ni requieren
 una librería de iconos externa.
+
+## Imagen de fondo del sobre
+
+Para personalizar la portada cerrada, selecciona una imagen JPG, PNG o WebP
+desde **Imagen de portada** en el gestor local y publícala junto con los demás
+cambios. Se limita a 8 MB y 25 megapíxeles. El gestor actualiza la ruta en los
+estilos y agrega un identificador de caché; el degradado suave se conserva
+encima de la imagen y la tarjeta abierta no cambia. Puedes quitarla desde el
+gestor para volver al fondo predeterminado.
 
 ## Gestor local y publicación
 
@@ -36,9 +47,9 @@ publicaciones, el gestor compara los archivos locales con la rama `main`, lista
 las diferencias y pide confirmación si un archivo también fue cambiado en
 GitHub. Los archivos que el gestor no administra se conservan.
 
-Solo se publican `index.html`, `css/style.css`, `js/script.js`,
-`event-config.json` y `README.md`. Los cambios de datos se guardan primero en
-esta computadora. Para servir la página, configura GitHub Pages una vez en
+Se publican `index.html`, `css/style.css`, `js/script.js`, `event-config.json`,
+`README.md` y la imagen de portada seleccionada. Los cambios se guardan primero
+en esta computadora. Para servir la página, configura GitHub Pages una vez en
 **Settings → Pages**, usando `main` y la carpeta raíz (`/(root)`), si aún no está
 habilitado.
 

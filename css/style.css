@@ -251,9 +251,16 @@ html[data-theme="dark"] .theme-icon-sun {
   padding: 30px;
   border: 1px solid #ffffffbd;
   border-radius: 30px;
-  background:
+  /* La imagen de esta variable se configura desde el gestor local. */
+  --envelope-image: none;
+  background-image:
+    linear-gradient(145deg, #ffffff50, #ffffff20),
+    var(--envelope-image),
     radial-gradient(ellipse at 50% 24%, #ffffffbd 0, transparent 54%),
     linear-gradient(145deg, #dcebe5, #c9ded8 52%, #b8d2ce);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   box-shadow: var(--shadow), inset 0 0 0 8px #ffffff42;
   color: var(--ink);
   cursor: pointer;
@@ -263,7 +270,9 @@ html[data-theme="dark"] .theme-icon-sun {
 
 html[data-theme="dark"] .card-envelope {
   border-color: #ffffff25;
-  background:
+  background-image:
+    linear-gradient(145deg, #11182755, #11182730),
+    var(--envelope-image),
     radial-gradient(ellipse at 50% 24%, #45635c 0, transparent 54%),
     linear-gradient(145deg, #29423f, #21383b 52%, #1b2c37);
   box-shadow: var(--shadow), inset 0 0 0 8px #ffffff0c;
@@ -303,14 +312,14 @@ html[data-theme="dark"] .card-envelope {
   inset: 0 0 auto;
   height: 58%;
   clip-path: polygon(0 0, 100% 0, 50% 100%);
-  background: linear-gradient(155deg, #eaf3ed, #c6ddd4);
+  background: linear-gradient(155deg, #eaf3eddd, #c6ddd4dd);
   filter: drop-shadow(0 5px 5px #304d4412);
   transform-origin: top center;
   transition: transform .55s cubic-bezier(.2,.75,.3,1), opacity .35s ease;
 }
 
 html[data-theme="dark"] .envelope-flap {
-  background: linear-gradient(155deg, #38564f, #29423f);
+  background: linear-gradient(155deg, #38564fdd, #29423fdd);
 }
 
 .envelope-front {
@@ -318,28 +327,28 @@ html[data-theme="dark"] .envelope-flap {
   z-index: 1;
   inset: 28% 0 0;
   clip-path: polygon(0 0, 50% 52%, 100% 0, 100% 100%, 0 100%);
-  background: linear-gradient(135deg, #d0e2d9, #b5d0c8);
+  background: linear-gradient(135deg, #d0e2d9dd, #b5d0c8dd);
 }
 
 html[data-theme="dark"] .envelope-front {
-  background: linear-gradient(135deg, #2c4742, #223b3d);
+  background: linear-gradient(135deg, #2c4742dd, #223b3ddd);
 }
 
 .seal {
   position: relative;
-  z-index: 3;
+  z-index: 4;
   display: grid;
   width: min(100%, 245px);
-  min-height: 180px;
+  min-height: 165px;
   align-content: center;
   justify-items: center;
   gap: 7px;
+  transform: translateY(28px);
   padding: 26px 20px;
   border: 1px solid #ffffffd9;
-  border-radius: 20px;
+  border-radius: 18px;
   background: color-mix(in srgb, var(--surface) 92%, transparent);
   box-shadow: 0 16px 38px #263e3830;
-  transform: translateY(28px);
   transition: transform .35s ease, opacity .3s ease;
 }
 
@@ -381,7 +390,7 @@ html[data-theme="dark"] .envelope-front {
   position: absolute;
   z-index: 3;
   color: #fff9e9;
-  text-shadow: 0 2px 9px #8eaa9b90;
+  text-shadow: 0 2px 9px #607b9c90;
 }
 
 .sparkle-one {
